@@ -19,17 +19,9 @@ def test():
         word = test
 
     if len(word) >= 3:
-        link = "https://handspeak.com/word/" + \
-            word[0:1] + "/" + word[0:3] + "/" + word + ".mp4"
-        if requests.get(link).status_code != 200:
-            link = "https://handspeak.com/word/" + \
-                word[0:1] + "/" + word + ".mp4"
-        if requests.get(link).status_code != 200:
-            link = "https://handspeak.com/word/" + \
-                word[0:1] + "/" + word[0:3] + "/" + word + "-fs" + ".mp4"
-        if requests.get(link).status_code != 200:
-            link = "https://handspeak.com/word/" + \
-                word[0:1] + "/" + word + "-fs" + ".mp4"
+        link = check(word)
+        if requests.get(link).status_code != 200 and word[-1] == 's':
+            link = check(word[:-1])
     elif len(word) == 1:
         link = "https://handspeak.com/word/" + \
             word + "/" + word + "-abc" + ".mp4"
@@ -39,5 +31,21 @@ def test():
 
     if requests.get(link).status_code != 200:
         link = "Video cannot be found."
+
+    return link
+
+
+def check(word):
+    link = "https://handspeak.com/word/" + \
+        word[0:1] + "/" + word[0:3] + "/" + word + ".mp4"
+    if requests.get(link).status_code != 200:
+        link = "https://handspeak.com/word/" + \
+            word[0:1] + "/" + word + ".mp4"
+    if requests.get(link).status_code != 200:
+        link = "https://handspeak.com/word/" + \
+            word[0:1] + "/" + word[0:3] + "/" + word + "-fs" + ".mp4"
+    if requests.get(link).status_code != 200:
+        link = "https://handspeak.com/word/" + \
+            word[0:1] + "/" + word + "-fs" + ".mp4"
 
     return link
