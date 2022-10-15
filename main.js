@@ -5,7 +5,7 @@ function load() {
         url +
         "?data=" +
         JSON.stringify({
-            word: "banana",
+            word: "f",
         }),
         response
     );

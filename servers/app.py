@@ -11,6 +11,7 @@ CORS(app)
 def test():
     content = request.args.get("data")
     test = json.loads(content)['word']
+    print(test)
 
     if test is None:
         word = "hey lol"
@@ -23,6 +24,15 @@ def test():
         if requests.get(link).status_code != 200:
             link = "https://handspeak.com/word/" + \
                 word[0:1] + "/" + word + ".mp4"
+        if requests.get(link).status_code != 200:
+            link = "https://handspeak.com/word/" + \
+                word[0:1] + "/" + word[0:3] + "/" + word + "-fs" + ".mp4"
+        if requests.get(link).status_code != 200:
+            link = "https://handspeak.com/word/" + \
+                word[0:1] + "/" + word + "-fs" + ".mp4"
+    elif len(word) == 1:
+        link = "https://handspeak.com/word/" + \
+            word + "/" + word + "-abc" + ".mp4"
     else:
         link = "https://handspeak.com/word/" + \
             word[0:1] + "/" + word + ".mp4"
