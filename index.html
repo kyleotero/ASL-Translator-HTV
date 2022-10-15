@@ -13,22 +13,33 @@
     <div class="flex flex-col h-92% mt-6">
         <div id="first" class="bg-main w-9/12 h-5/6 rounded-lg shadow-bot mb-5 mt-5 md:mb-auto md:mt-auto m-auto flex">
             <textarea id="input" placeholder="Enter your code here."
-                class="bg-main text-white font-jetBrains text-mobile sm:text-med md:text-standard h-50% w-50% outline-none resize-none m-auto placeholder:text-[#89c8e2]"></textarea>
+                class="bg-main text-purple font-jetBrains text-mobile sm:text-med md:text-standard h-50% w-50% outline-none resize-none m-auto placeholder:text-[#89c8e2]"></textarea>
         </div>
-        <div class="justify-center text-center mt-5">
-            <button class="bg-slate-600 hover:bg-slate-500 text-white font-jetBrains font-bold py-2 px-4 rounded-l outline-none resize-none m-auto placeholder:text-[#89c8e2] justify-center">
-              Prev
+
+        <div id = "translate" class="justify-center text-center mt-5">
+            <button class="bg-slate-600 hover:bg-slate-500 text-white font-jetBrains font-bold py-2 px-4 rounded outline-none resize-none my-auto placeholder:text-[#89c8e2] justify-center mx-3">
+                Translate
             </button>
-            <button
-                class="bg-slate-600 hover:bg-slate-500 text-white font-jetBrains font-bold py-2 px-4 rounded-r outline-none resize-none m-auto placeholder:text-[#89c8e2]">
+        </div>
+
+        <div id="second" class="bg-main w-9/12 h-5/6 rounded-lg shadow-bot m-auto flex flex-row mt-4 text-center justify-center inline-block ">
+            
+            <button id="prev" class="bg-slate-600 hover:bg-slate-500 text-white font-jetBrains font-bold py-2 px-4 rounded outline-none resize-none my-auto placeholder:text-[#89c8e2] justify-center mx-3">
+                Prev
+            </button>
+            
+            <div id="video" class="my-auto">
+                <video id="output" autoplay>    
+                    <source readonly src="http://www.handspeak.com/word/h/hi.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            
+            <button id="next" class="bg-slate-600 hover:bg-slate-500 text-white font-jetBrains font-bold py-2 px-4 rounded outline-none resize-none my-auto placeholder:text-[#89c8e2] mx-3">
                 Next
             </button>
-        </div>
-        <div id="second" class="bg-main w-9/12 h-5/6 rounded-lg shadow-bot m-auto flex mt-4">
-            <video id="output" autoplay>    
-                <source readonly src="http://www.handspeak.com/word/h/hi.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
+           
         </div>
 
     </div>
