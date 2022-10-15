@@ -355,13 +355,6 @@ input::-moz-placeholder, textarea::-moz-placeholder {
   /* 2 */
 }
 
-input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-  opacity: 1;
-  /* 1 */
-  color: #9ca3af;
-  /* 2 */
-}
-
 input::placeholder,
 textarea::placeholder {
   opacity: 1;
@@ -562,12 +555,36 @@ video {
   margin: auto;
 }
 
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
 .mb-5 {
   margin-bottom: 1.25rem;
 }
 
 .mt-5 {
   margin-top: 1.25rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.mt-7 {
+  margin-top: 1.75rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .flex {
@@ -586,10 +603,6 @@ video {
   width: 75%;
 }
 
-.w-95\% {
-  width: 95%;
-}
-
 .resize-none {
   resize: none;
 }
@@ -598,8 +611,22 @@ video {
   flex-direction: column;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .rounded-lg {
   border-radius: 0.5rem;
+}
+
+.rounded-l {
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.rounded-r {
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
 }
 
 .bg-dark {
@@ -612,12 +639,35 @@ video {
   background-color: rgb(25 27 29 / var(--tw-bg-opacity));
 }
 
+.bg-slate-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
 .font-jetBrains {
   font-family: jetBrains;
 }
 
 .text-mobile {
   font-size: 2vw;
+}
+
+.font-bold {
+  font-weight: 700;
 }
 
 .text-white {
@@ -647,14 +697,14 @@ video {
   color: rgb(137 200 226 / var(--tw-text-opacity));
 }
 
-.placeholder\:text-\[\#89c8e2\]:-ms-input-placeholder {
+.placeholder\:text-\[\#89c8e2\]::placeholder {
   --tw-text-opacity: 1;
   color: rgb(137 200 226 / var(--tw-text-opacity));
 }
 
-.placeholder\:text-\[\#89c8e2\]::placeholder {
-  --tw-text-opacity: 1;
-  color: rgb(137 200 226 / var(--tw-text-opacity));
+.hover\:bg-slate-500:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 640px) {
@@ -670,14 +720,6 @@ video {
 
   .md\:mt-auto {
     margin-top: auto;
-  }
-
-  .md\:w-5\/12 {
-    width: 41.666667%;
-  }
-
-  .md\:flex-row {
-    flex-direction: row;
   }
 
   .md\:text-standard {
