@@ -27,6 +27,7 @@ function response(data) {
 }
 
 function get() {
+    console.log(vids)
     var source = document.getElementById("displayedVid")
     var video = document.getElementById("output")
     source.src = vids[index]
