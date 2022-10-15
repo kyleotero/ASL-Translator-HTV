@@ -10,7 +10,18 @@
 </head>
 
 <body class="bg-dark" onload="load()">
-
+    <div class="flex flex-col md:flex-row h-92%">
+        <div id="first"
+            class="bg-main w-9/12 md:w-5/12 h-5/6 rounded-lg shadow-bot mb-5 mt-5 md:mb-auto md:mt-auto m-auto flex">
+            <textarea id="input" placeholder="Enter your code here."
+                class="bg-main text-white font-jetBrains text-mobile sm:text-med md:text-standard h-92% w-95% outline-none resize-none m-auto placeholder:text-[#89c8e2]"></textarea>
+        </div>
+        <div id="second" class="bg-main w-9/12 md:w-5/12 h-5/6 rounded-lg shadow-bot m-auto flex">
+            <textarea id="output" placeholder="Your pseudocode will appear here."
+                class="bg-main text-white font-jetBrains text-mobile sm:text-med md:text-standard h-92% w-95% outline-none resize-none m-auto placeholder:text-[#89c8e2]"
+                readonly></textarea>
+        </div>
+    </div>
 </body>
 
 </html>
