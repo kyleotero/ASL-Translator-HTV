@@ -721,7 +721,7 @@ video {
 @font-face {
   font-family: jetBrains;
 
-  src: url(./fonts/JetBrainsMono-Regular.ttf);
+  src: url(./public/JetBrainsMono-Regular.ttf);
 }
 
 .placeholder\:text-\[\#89c8e2\]::-moz-placeholder {
