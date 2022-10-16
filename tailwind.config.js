@@ -21,17 +21,11 @@ module.exports = {
         mobile: "2vw",
         med: "1.5vw",
       },
-      content: {
-        pre: "attr(pref)",
-      },
       fontFamily: {
         jetBrains: ["jetBrains"],
       },
       borderWidth: {
         3: "3px",
-      },
-      flex: {
-        midflex: "0 0 50%",
       },
     },
   },

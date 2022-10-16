@@ -10,37 +10,38 @@
 </head>
 
 <body class="bg-dark">
-    <div class="flex flex-col h-92% mt-6">
-        <div id="first" class="bg-main w-9/12 h-5/6 rounded-lg shadow-bot mb-5 mt-5 md:mb-auto md:mt-auto m-auto flex">
-            <textarea id="input" placeholder="Enter your code here."
-                class="bg-main text-white font-jetBrains text-mobile sm:text-med md:text-standard h-5/6 w-11/12 outline-none resize-none m-auto placeholder:text-[#89c8e2]"></textarea>
+    <div class="flex flex-col h-92% mt-6 ">
+        <div id="first"
+            class="bg-main w-9/12 h-5/6 rounded-lg shadow-bot mb-5 mt-5 md:mb-auto md:mt-auto m-auto text-white flex justify-center">
+            <textarea id="input" placeholder="Enter your text here."
+                class="bg-main font-jetBrains text-mobile sm:text-med md:text-standard h-5/6 w-11/12 outline-none resize-none m-auto placeholder:text-[#89c8e2] text-center line-height "></textarea>
         </div>
         <div id="translate" class="justify-center text-center mt-5">
             <button
                 class="bg-slate-600 hover:bg-slate-500 text-white font-jetBrains font-bold py-2 px-4 rounded outline-none resize-none my-auto placeholder:text-[#89c8e2] justify-center mx-3"
-                onclick="initial()">
+                onclick="initial();">
                 Translate
             </button>
         </div>
-
         <div id="second"
-            class="bg-main w-9/12 h-5/6 rounded-lg shadow-bot m-auto flex flex-row mt-4 text-center justify-center inline-block ">
+            class="bg-main w-1/2 h-5/6 rounded-lg shadow-bot m-auto flex flex-row mt-4 text-center justify-center inline-block ">
 
             <button id="prev"
-                class="bg-slate-600 hover:bg-slate-500 text-white font-jetBrains font-bold py-2 px-4 rounded outline-none resize-none my-auto placeholder:text-[#89c8e2] justify-center mx-3"
+                class="bg-slate-600 hover:bg-slate-500 text-white font-jetBrains font-bold py-2 px-4 rounded outline-none resize-none my-auto placeholder:text-[#89c8e2] mx-16"
                 onclick="left()">
                 Prev
             </button>
-
-            <div id="video" class="my-auto">
-                <video id="output" autoplay>
-                    <source id="displayedVid" class="text-white" src="" type="video/mp4">
-                    </source>
-                </video>
+            <div id="video" class="mb-10 flex justify-center">
+                <p id="current" class="font-jetBrains text-white absolute bottom-12 "></p>
+                <div class="my-auto rounded-lg overflow-hidden">
+                    <video id="output" height="300" width="300" class="rounded-lg " onclick="play()" autoplay>
+                        <source id="displayedVid" src="" type="video/mp4" />
+                    </video>
+                </div>
             </div>
 
             <button id="next"
-                class="bg-slate-600 hover:bg-slate-500 text-white font-jetBrains font-bold py-2 px-4 rounded outline-none resize-none my-auto placeholder:text-[#89c8e2] mx-3"
+                class="bg-slate-600 hover:bg-slate-500 text-white font-jetBrains font-bold py-2 px-4 rounded outline-none resize-none my-auto placeholder:text-[#89c8e2] mx-16"
                 onclick="right()">
                 Next
             </button>

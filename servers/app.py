@@ -1,4 +1,5 @@
 import json
+import string
 
 import requests
 from flask import Flask, request
@@ -12,12 +13,8 @@ CORS(app)
 def test():
     content = request.args.get("data")
     test = json.loads(content)['word']
-    print(test)
 
-    if test is None:
-        word = "hey lol"
-    else:
-        word = test
+    word = test.translate(str.maketrans('', '', string.punctuation)).lower()
 
     if len(word) >= 3:
         link = check(word)

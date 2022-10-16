@@ -1,10 +1,11 @@
 var url = "http://127.0.0.1:5000/getUrl"
 var index = 0
 var vids = []
+var words
 
 function initial() {
     var input = document.getElementById("input")
-    var words = input.value.split(" ")
+    words = input.value.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "").split(" ")
     vids = []
 
     $.ajaxSetup({ async: false });
@@ -27,10 +28,17 @@ function response(data) {
 }
 
 function get() {
-    console.log(vids)
+    var current = document.getElementById("current")
     var source = document.getElementById("displayedVid")
     var video = document.getElementById("output")
-    source.src = vids[index]
+
+    if (vids[index] == "Video cannot be found.") {
+        current.innerHTML = "The given word, '" + words[index] + "' has no sign."
+        source.src = ""
+    } else {
+        current.innerHTML = words[index].charAt(0).toUpperCase() + words[index].slice(1);
+        source.src = vids[index]
+    }
     video.load()
     video.play()
 }
