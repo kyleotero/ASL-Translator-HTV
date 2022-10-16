@@ -1,4 +1,4 @@
-# ASL-Translator
+# ASL Translator
 
 ## :bulb: Inspiration 
 Our group had set out with the goal to create an application where we can tackle some of the daily challenges some people go through.
